@@ -9,6 +9,11 @@
     </head>
 
     <body> 
+        <div id="loader">
+            <div class="spinner"></div>
+            <div class="loading-text">Happy hacking!</div>ß
+        </div>
+
         <div class="main" hidden>
             <div>
                 <div id="title">
@@ -26,17 +31,55 @@
 
             <div id="content">
                 <div class="date">
-                    [02.05.2026]
+                    [12.18.2024]
                 </div>
 
                 <a href="https://suttonkitty.github.io/inter-you/" target="_blank" class="pages">
                     <b>Try me!</b>
                 </a>
 
+                <a href="https://github.com/SuttonKitty/inter-you/tree/main" target="_blank" class="repository">
+                    GitHub Repository.
+                </a>
+
                 <img src="assets/interyou.png" alt="inter-you project image">
             </div>
-
-            
         </div>
+
+        <script>
+            const loader = document.getElementById("loader");
+            const main = document.getElementById("main");
+            const images = document.images;
+            let loaded = 0;
+
+            function done() {
+                loader.style.opacity = "0";
+                loader.style.transition = "opacity 0.4s ease";
+
+                setTimeout(() => {
+                loader.remove();
+                main.hidden = false;
+                }, 400);
+            }
+
+            if (images.length === 0) done();
+
+            for (const img of images) {
+                if (img.complete) {
+                loaded++;
+                } else {
+                img.addEventListener("load", () => {
+                    loaded++;
+                    if (loaded === images.length) done();
+                });
+                img.addEventListener("error", () => {
+                    loaded++;
+                    if (loaded === images.length) done();
+                });
+                }
+            }
+
+            if (loaded === images.length) done();
+        </script>
     </body>
 </html>
