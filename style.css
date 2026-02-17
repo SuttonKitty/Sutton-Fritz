@@ -202,6 +202,7 @@ video {
     font-size: 0.8;
     text-decoration: none;
     color: #2b393b;
+    width: fit-content;
 }
 
 #commit {
@@ -226,7 +227,7 @@ video {
     }
 
     .main {
-        padding: 6rem 10rem 0 10rem;
+        padding: 10rem 10rem 0 10rem;
         width: 40%;
         gap: 3rem;
         font-size: 1rem;
@@ -234,8 +235,8 @@ video {
     }
 
     .main-index {
-        padding: 6rem 10rem 0 10rem;
-        height: 0.7;
+        padding: 10rem 10rem 0 10rem;
+        /* height: 70%; */
         width: 40%;
         gap: 3rem;
         font-size: 1rem;
