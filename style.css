@@ -12,7 +12,7 @@ body {
     cursor: url("./assets/bunny.cur") 16 16, pointer;
     overflow-x: hidden;
     background-image: url("./assets/portBg_lg.png");
-    background-size: 140% auto;
+    background-size: 155% auto;
     background-position: top center;
 }
 
