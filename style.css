@@ -19,6 +19,17 @@ body {
     background-position: top center;
 }
 
+::selection {
+    color: #251a18;
+    background: #90625d;
+    /* cursor: auto; */
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #251a18;
+    background: #90625d;
+    /* cursor: auto; */
+}
 
 #loader {
     position: fixed;
