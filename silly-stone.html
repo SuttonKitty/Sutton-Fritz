@@ -40,9 +40,15 @@
                     <b>Silly stone.</b>
                 </div>
 
-                <img loading="lazy" src="assets/silly-stone.png" alt="rock with eyes">
+                <img 
+                    id="sillyStone"
+                    loading="lazy" 
+                    src="assets/silly-stone.png" 
+                    alt="rock with eyes"
+                    style="cursor: pointer;"
+                >
 
-                <div>A silly stone made in Blender</div>
+                <div>A silly stone made in Blender. (Click it to tickle him. Then click again to stop because it's kinda creepy.)</div>
 
                 <div id="commit">
                     <a href="mailto:sutton.fritz04@gmail.com" target="_blank" class="pages">
@@ -63,5 +69,21 @@
                 </div>
             </div>
         </div>
+
+        <audio id="stoneAudio" src="assets/stone.mp3"></audio>
+
+        <script>
+            const image = document.getElementById("sillyStone");
+            const audio = document.getElementById("stoneAudio");
+
+            image.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0; // optional: reset to beginning
+                }
+            });
+        </script>
     </body>
 </html>
