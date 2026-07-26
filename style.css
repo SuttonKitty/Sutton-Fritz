@@ -124,7 +124,7 @@ video {
 }
 
 .vertical-img {
-    width: 60%;
+    width: 100%;
     height: auto;
     border-radius: 3px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
