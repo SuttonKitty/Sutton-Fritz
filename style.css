@@ -295,11 +295,11 @@ video {
         padding-left: 3rem;
     }
 
-    /* .pages-container {
+    .pages-container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         gap: 1rem;
         text-align: left;
-    } */
+    }
 }
