@@ -279,7 +279,7 @@ video {
         grid-template-columns: minmax(0, 1fr) 220px;
         gap: 2rem;
         align-items: stretch; /* both columns become the same height */
-        text-align: justify;
+        /* text-align: justify; */
     }
 
     .vertical-img {
